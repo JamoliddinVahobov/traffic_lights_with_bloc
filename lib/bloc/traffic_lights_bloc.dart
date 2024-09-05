@@ -20,7 +20,7 @@ class TrafficLightsBloc extends Bloc<TrafficLightsEvent, TrafficLightsState> {
     on<StartTrafficLights>(_startTrafficLights);
     on<PauseTrafficLights>(_pauseTrafficLights);
     on<ResumeTrafficLights>(_resumeTrafficLights);
-    on<RestartTrafficLights>(_restartTrafficLights);
+    on<ResetTrafficLights>(_resetTrafficLights);
   }
 
   Future<void> _startTrafficLights(
@@ -103,8 +103,8 @@ class TrafficLightsBloc extends Bloc<TrafficLightsEvent, TrafficLightsState> {
     add(StartTrafficLights());
   }
 
-  Future<void> _restartTrafficLights(
-      RestartTrafficLights event, Emitter<TrafficLightsState> emit) async {
+  Future<void> _resetTrafficLights(
+      ResetTrafficLights event, Emitter<TrafficLightsState> emit) async {
     emit(state.copyWith(
       activeCircle: 0,
       isPaused: false,

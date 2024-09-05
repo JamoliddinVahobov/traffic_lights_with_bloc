@@ -11,4 +11,4 @@ class PauseTrafficLights extends TrafficLightsEvent {}
 
 class ResumeTrafficLights extends TrafficLightsEvent {}
 
-class RestartTrafficLights extends TrafficLightsEvent {}
+class ResetTrafficLights extends TrafficLightsEvent {}

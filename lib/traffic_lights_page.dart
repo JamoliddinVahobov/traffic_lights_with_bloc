@@ -200,7 +200,7 @@ class TrafficLightsPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 onTap: () {
                   context.read<TrafficLightsBloc>().add(
-                        RestartTrafficLights(),
+                        ResetTrafficLights(),
                       );
                 },
                 child: Ink(
@@ -213,7 +213,7 @@ class TrafficLightsPage extends StatelessWidget {
                   child: const Center(
                     child: FittedBox(
                       child: Text(
-                        'Restart Traffic Lights',
+                        'Reset Traffic Lights',
                         style: TextStyle(
                             fontSize: 12,
                             color: Colors.white,
